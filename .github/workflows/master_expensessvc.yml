@@ -75,7 +75,7 @@ jobs:
         with:
           app-name: 'expensessvc'
           slot-name: 'Production'
-          package: C:\Users\runneradmin\AppData\Local\Microsoft\dotnet/.net-app/
+          package: D:\a\ExpensesService\ExpensesService\.net-app/
           
       - name: Azure SQL Deploy
         uses: Azure/sql-action@v2
