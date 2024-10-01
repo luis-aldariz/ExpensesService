@@ -42,12 +42,12 @@ jobs:
             dotnet tool install dotnet-ef
             
       - name: Generate EF Core Migration Script
-        run: dotnet ef migrations script --idempotent --no-build --configuration Release --output C:\Users\runneradmin\AppData\Local\Microsoft\dotnet//sql/sql-script.sql --context ExpensesService.Data.ProjectContext --project ${{ github.workspace }}/ExpensesService/ExpensesService.csproj
+        run: dotnet ef migrations script --idempotent --no-build --configuration Release --output C:\Users\runneradmin\AppData\Local\Microsoft\dotnet/sql/sql-script.sql --context ExpensesService.Data.ProjectContext --project ${{ github.workspace }}/ExpensesService/ExpensesService.csproj
       
       - uses: actions/upload-artifact@v3
         with:
           name: ddl-updates
-          path: ${{env.DOTNET_ROOT}}/sql/sql-script.sql
+          path: C:\Users\runneradmin\AppData\Local\Microsoft\dotnet/sql/sql-script.sql
 
   deploy:
     runs-on: windows-latest
