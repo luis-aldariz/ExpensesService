@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "apis1": {
+      "ignored": "true",
+      "type": "apis.azure"
+    },
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/expensessvc/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsProjectContext_7762BDFD10",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/deploymentdbsrv/databases/deploymentdb",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:ProjectContext"
+    }
+  }
+}
