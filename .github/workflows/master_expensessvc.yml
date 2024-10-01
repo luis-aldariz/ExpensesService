@@ -78,7 +78,7 @@ jobs:
           package: ./.net-app/
           
       - name: Azure SQL Deploy
-        uses: Azure/sql-action@v3
+        uses: Azure/sql-action@v2
         with:
           # The connection string, including authentication information, for the Azure SQL Server database.
           connection-string: ${{ secrets.SQL_CONNECTION_STRING }}
