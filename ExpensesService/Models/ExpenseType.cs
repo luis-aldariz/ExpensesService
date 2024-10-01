@@ -8,5 +8,7 @@ namespace ExpensesService.Models
 
         [Display(Name = "Expense Type")]
         public string Name { get; set; }
+
+        public bool IsActive { get; set; }
     }
 }

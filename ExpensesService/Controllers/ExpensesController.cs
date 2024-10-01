@@ -21,7 +21,7 @@ namespace ExpensesService.Controllers
         [HttpGet(Name = "GetExpenseTypes")]
         public async Task<IEnumerable<ExpenseType>> GetExpenseTypes()
         {
-            return await _context.ExpenseTypes.ToListAsync();
+            return await _context.ExpenseTypes.Where(t => t.IsActive).ToListAsync();
         }
     }
 }
