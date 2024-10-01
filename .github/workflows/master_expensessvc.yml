@@ -61,8 +61,6 @@ jobs:
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
-        with: 
-          name: .net-app
       
       - name: Login to Azure
         uses: azure/login@v2
@@ -73,11 +71,11 @@ jobs:
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v2
         with:
           app-name: 'expensessvc'
           slot-name: 'Production'
-          package: .
+          package: ./.net-app/
           
       - name: Azure SQL Deploy
         uses: Azure/sql-action@v2
