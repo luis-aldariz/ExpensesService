@@ -21,7 +21,7 @@ namespace ExpensesService.Controllers
         [HttpGet(Name = "GetProducts")]
         public async Task<IEnumerable<Product>> GetProducts()
         {
-            return await _context.Products.Where(p => p.Id == 1).ToListAsync();
+            return await _context.Products.ToListAsync();
         }
     }
 }
